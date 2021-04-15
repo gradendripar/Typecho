@@ -1,0 +1,209 @@
+CREATE TABLE Student(
+Sno char(10) Primary key,
+Sname varchar(20),
+Ssex char(2),
+Sage smallint,
+Sdept varchar(20)
+);
+CREATE TABLE Course(
+Cno char(10),
+Primary key(Cno),
+Cname varchar(20),
+Cpno char(10),
+Ccredit smallint,
+Snumber int
+);
+CREATE TABLE SC(
+Sno char(10),
+Cno char(10),
+Primary key (Sno,Cno),
+Grade smallint
+);
+insert into Student values ('001','林景铄','m',18,'CS');
+insert into Student values ('002','卫尔嫣','f',19,'CA');
+insert into Student values ('003','上官令闻','m',20,'LS');
+insert into Student values ('004','祁宏安','m',18,'FC');
+insert into Student values ('005','蓝素昕','f',18,'MS');
+insert into Student values ('006','贺兰肃风','m',17,'PE');
+insert into Student values ('007','颜隐之','m',22,'CM');
+insert into Student values ('008','荆婷秀','f',25,'LS');
+insert into Student values ('009','林景铄','f',26,'GS');
+insert into Student values ('010','方良俊','m',27,'EM');
+insert into Student values ('011','杜紫','f',22,'CS');
+insert into Student values ('012','姜狸族','f',21,'CM');
+insert into Student values ('013','林寒泉','m',20,'FT');
+insert into Student values ('014','薛云芊','f',19,'CS');
+insert into Student values ('015','韦静贤','m',19,'CS');
+insert into Student values ('016','孟安蕾','f',16,'CA');
+insert into Student values ('017','何忆寒','m',18,'LS');
+insert into Student values ('018','龙寻云','f',18,'FC');
+insert into Student values ('019','韦虚灵','m',19,'MS');
+insert into Student values ('020','韩易殇','m',22,'PE');
+insert into Student values ('021','梁瑾儿','f',20,'CM');
+insert into Student values ('022','卫又菡','f',20,'CS');
+insert into Student values ('023','燕紫璃','f',21,'LS');
+insert into Student values ('024','韩子琳','f',18,'GS');
+insert into Student values ('025','谢饮月','f',18,'EM');
+insert into Student values ('026','林冶静','f',20,'CS');
+insert into Student values ('027','姬煜枫','m',20,'CM');
+insert into Student values ('028','桑玮霖','m',19,'FT');
+insert into Student values ('029','东方道苍','m',18,'CM');
+insert into Student values ('030','江鸿晖','m',17,'CA');
+insert into Course values ('001','数据库',null,3,70);
+insert into Course values ('002','软件工程',null,2,70);
+insert into Course values ('003','操作系统',null,4,70);
+insert into Course values ('004','离散数学',null,5,70);
+insert into Course values ('005','大学数学',null,3,70);
+insert into Course values ('006','大学英语',null,3,70);
+insert into Course values ('007','Python',null,2,70);
+insert into Course values ('008','大学物理',null,5,70);
+insert into Course values ('009','概率论与数理统计',null,3,70);
+insert into Course values ('010','大学体育',null,4,70);
+insert into SC values ('001','001',60);
+insert into SC values ('001','003',65);
+insert into SC values ('001','008',80);
+insert into SC values ('002','008',70);
+insert into SC values ('002','009',80);
+insert into SC values ('002','005',56);
+insert into SC values ('003','002',30);
+insert into SC values ('004','004',90);
+insert into SC values ('005','006',77);
+insert into SC values ('006','007',43);
+insert into SC values ('007','010',99);
+insert into SC values ('008','010',98);
+insert into SC values ('009','001',99);
+insert into SC values ('010','002',85);
+insert into SC values ('011','003',76);
+insert into SC values ('012','004',59);
+insert into SC values ('013','005',64);
+insert into SC values ('014','006',49);
+insert into SC values ('015','007',64);
+insert into SC values ('016','008',81);
+insert into SC values ('017','009',88);
+insert into SC values ('018','010',66);
+insert into SC values ('019','001',64);
+insert into SC values ('020','002',96);
+insert into SC values ('021','003',69);
+insert into SC values ('021','004',65);
+insert into SC values ('022','005',77);
+insert into SC values ('022','006',78);
+insert into SC values ('023','007',79);
+insert into SC values ('023','008',80);
+insert into SC values ('024','009',81);
+insert into SC values ('024','010',82);
+insert into SC values ('025','001',83);
+insert into SC values ('026','002',84);
+insert into SC values ('026','003',85);
+insert into SC values ('027','004',86);
+insert into SC values ('028','005',87);
+insert into SC values ('028','006',88);
+insert into SC values ('029','007',89);
+insert into SC values ('029','008',90);
+insert into SC values ('030','009',91);
+insert into SC values ('030','010',96);
+commit;
+
+CREATE TABLE Student(
+Sno char(10) Primary key,
+Sname varchar(20),
+Sage smallint,
+Ssex char(2),
+Sdept varchar(20)
+);
+CREATE TABLE Course(
+Cno char(10),
+Primary key(Cno),
+Cname varchar(20),
+Cpno char(10),
+Ccredit smallint,
+Snumber int
+);
+CREATE TABLE SC(
+Sno char(10),
+Cno char(10),
+Primary key (Sno,Cno),
+Grade smallint
+);
+insert into Student values ('001','林景铄','m',18,'CS');
+insert into Student values ('002','卫尔嫣','f',19,'CA');
+insert into Student values ('003','上官令闻','m',20,'LS');
+insert into Student values ('004','祁宏安','m',18,'FC');
+insert into Student values ('005','蓝素昕','f',18,'MS');
+insert into Student values ('006','贺兰肃风','m',17,'PE');
+insert into Student values ('007','颜隐之','m',22,'CM');
+insert into Student values ('008','荆婷秀','f',25,'LS');
+insert into Student values ('009','林景铄','f',26,'GS');
+insert into Student values ('010','方良俊','m',27,'EM');
+insert into Student values ('011','杜紫','f',22,'CS');
+insert into Student values ('012','姜狸族','f',21,'CM');
+insert into Student values ('013','林寒泉','m',20,'FT');
+insert into Student values ('014','薛云芊','f',19,'CS');
+insert into Student values ('015','韦静贤','m',19,'CS');
+insert into Student values ('016','孟安蕾','f',16,'CA');
+insert into Student values ('017','何忆寒','m',18,'LS');
+insert into Student values ('018','龙寻云','f',18,'FC');
+insert into Student values ('019','韦虚灵','m',19,'MS');
+insert into Student values ('020','韩易殇','m',22,'PE');
+insert into Student values ('021','梁瑾儿','f',20,'CM');
+insert into Student values ('022','卫又菡','f',20,'CS');
+insert into Student values ('023','燕紫璃','f',21,'LS');
+insert into Student values ('024','韩子琳','f',18,'GS');
+insert into Student values ('025','谢饮月','f',18,'EM');
+insert into Student values ('026','林冶静','f',20,'CS');
+insert into Student values ('027','姬煜枫','m',20,'CM');
+insert into Student values ('028','桑玮霖','m',19,'FT');
+insert into Student values ('029','东方道苍','m',18,'CM');
+insert into Student values ('030','江鸿晖','m',17,'CA');
+insert into Course values ('001','数据库',null,3,70);
+insert into Course values ('002','软件工程',null,2,70);
+insert into Course values ('003','操作系统',null,4,70);
+insert into Course values ('004','离散数学',null,5,70);
+insert into Course values ('005','大学数学',null,3,70);
+insert into Course values ('006','大学英语',null,3,70);
+insert into Course values ('007','Python',null,2,70);
+insert into Course values ('008','大学物理',null,5,70);
+insert into Course values ('009','概率论与数理统计',null,3,70);
+insert into Course values ('010','马克思主义基本原理概论',null,4,70);
+insert into SC values ('001','001',60);
+insert into SC values ('001','003',65);
+insert into SC values ('001','008',80);
+insert into SC values ('002','008',70);
+insert into SC values ('002','009',80);
+insert into SC values ('002','005',56);
+insert into SC values ('003','002',30);
+insert into SC values ('004','004',90);
+insert into SC values ('005','006',77);
+insert into SC values ('006','007',43);
+insert into SC values ('007','010',99);
+insert into SC values ('008','010',98);
+insert into SC values ('009','001',99);
+insert into SC values ('010','002',85);
+insert into SC values ('011','003',76);
+insert into SC values ('012','004',59);
+insert into SC values ('013','005',64);
+insert into SC values ('014','006',49);
+insert into SC values ('015','007',64);
+insert into SC values ('016','008',81);
+insert into SC values ('017','009',88);
+insert into SC values ('018','010',66);
+insert into SC values ('019','001',64);
+insert into SC values ('020','002',96);
+insert into SC values ('021','003',69);
+insert into SC values ('021','004',65);
+insert into SC values ('022','005',77);
+insert into SC values ('022','006',78);
+insert into SC values ('023','007',79);
+insert into SC values ('023','008',80);
+insert into SC values ('024','009',81);
+insert into SC values ('024','010',82);
+insert into SC values ('025','001',83);
+insert into SC values ('026','002',84);
+insert into SC values ('026','003',85);
+insert into SC values ('027','004',86);
+insert into SC values ('028','005',87);
+insert into SC values ('028','006',88);
+insert into SC values ('029','007',89);
+insert into SC values ('029','008',90);
+insert into SC values ('030','009',91);
+insert into SC values ('030','010',96);
+commit;
